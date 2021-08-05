@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 class MatrixQ1
 {
   void input(int mat[][])
