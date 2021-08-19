@@ -1,5 +1,9 @@
 import java.util.Scanner;
-class DoWhile2
+// OBSERVATION #1
+// Make sure you name the file
+// with the same name as the class name
+// class DoWhile2
+class DoWhile1
 {
   public static void main(String args[])
   {
