@@ -1,3 +1,4 @@
+// Scored - 10 points
 import java.util.Scanner;
 class Employee
 {

@@ -1,31 +1,35 @@
 import java.util.Scanner;
-class Perfect
+class PerfectAlt
 {
-  boolean isPerfect(int num)
-  {
-    int sum=0;
-    for(int i=1;i<=num/2;i++)
+    int sumOfFactors(int num)
     {
-      if(num%i==0)
-      {
-        sum=sum+i;
-      }
+        int sum=0;
+        for(int i=1;i<=num/2;i++)
+        {
+            if(num%i==0)
+            {
+                sum=sum+i;
+            }
+        }
+        return sum;
     }
-    if(sum==num)
+    boolean isPerfect(int num)
     {
-      return true;
+        if(num==sumOfFactors(num))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    else
-    {
-      return false;
-    }
-  }
     public static void main(String[] args) 
     {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter a number:");
         int num = s.nextInt();
-        Perfect obj=new Perfect();
+        PerfectAlt obj=new PerfectAlt();
         if(obj.isPerfect(num)==true)
         {
             System.out.println("The number is Perfect");
@@ -36,5 +40,4 @@ class Perfect
         }    
     }
 }
-
 

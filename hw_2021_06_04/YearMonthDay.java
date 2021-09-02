@@ -1,3 +1,4 @@
+// Scored - 4 points for structure
 import java.util.Scanner;
 class YearMonthDay 
 {

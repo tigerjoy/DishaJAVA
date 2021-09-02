@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Armstrong
+class GenerateArmstrong
 {
   int countDigits(int num)
   {
@@ -14,12 +14,11 @@ class Armstrong
   boolean isArmstrong(int num)
   {
     int sum=0;
-    // The original value has to be saved
     int tempNum = num;
     int digits=countDigits(num);
     while(num>0)
     {
-      int dig=num%10; 
+      int dig=num%10;
       sum=sum+(int)(Math.pow(dig,digits));
       num/=10;
     }
@@ -35,16 +34,18 @@ class Armstrong
   public static void main(String args[])
   {
     Scanner sc=new Scanner(System.in);
-    System.out.println("Enter a number: ");
-    int num = sc.nextInt();
+    System.out.println("Enter the lowerbound");
+    int lb=sc.nextInt();
+    System.out.println("Enter the upperbound");
+    int ub=sc.nextInt();
     Armstrong obj=new Armstrong();
-    if(obj.isArmstrong(num)==true)
+    System.out.println("The Armstrong numbers are");
+    for(int i=lb;i<=ub;i++)
     {
-      System.out.println(num+" is a Armstrong number.");
-    }
-    else
-    {
-      System.out.println(num+" is not a Armstrong number.");
+      if(obj.isArmstrong(i)==true)
+      {
+        System.out.print(i+", ");
+      }
     }
   }
 }
